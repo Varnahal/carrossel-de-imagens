@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            scroll-behavior: smooth;
+            text-align: center;
+            display: flex;
+        }
+        iframe{
+            width: 400px;
+            height: 400px;
+        }
+        a{
+            padding: 2px;
+            border: 1px solid black;
+            border-radius: 30px;
+            background-color: rgb(169, 169, 169);
+            font-size: 30px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function muda(img){
+          var iframe = document.getElementById('iframe'); 
+          console.log(img)
+           iframe.src = 'iframe.html'+img
+        }
+        
+
+    </script>
+    <a onclick="muda('#img1')">1</a>
+    <a onclick="muda('#img2')">2</a>
+    <a onclick="muda('#img3')">3</a>
+    <a onclick="muda('#img4')">4</a>
+    <iframe src="iframe.html" id='iframe' frameborder="1"></iframe>
+    
+</body>
+</html>
